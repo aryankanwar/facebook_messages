@@ -32,7 +32,7 @@ function getData(url) {
 	  if(err){
 // For handling Internet connection error like{ [Error: socket hang up] code: 'ECONNRESET' }
 // keep on making a request to server until data is fetched so that our script doesnt terminate in middle		  
-		  if(err == 'ECONNRESET' || 'socket hang up'){
+		  if(err == 'ECONNRESET'){
 			  getData(url);
 		  }
 		  return;
