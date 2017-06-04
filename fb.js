@@ -4,7 +4,14 @@ var request =require('request');
 //for writing the messages in the file
 var fs = require('fs');
 var file = fs.createWriteStream('convo.txt');
-//enter your graph api access token with read_mailbox permission from API version 2.3 or less
+// go to https://developers.facebook.com/tools/explorer/?method=GET&path=me%3Ffields%3Dinbox&version=v2.3
+//1)click on Get token
+//2) select Get user acess token 
+//3)Tick read_mailbox permission 
+//Fianlly click on get access token
+//click on submit
+//select conversation id of chat thread you want to see messages
+// using v2.3 because new versions dont have permission for reading inbox 
 // because new versions dont have permission for reading inbox 
 var os =require('os') ;
 FB.setAccessToken('<acess_token>');
